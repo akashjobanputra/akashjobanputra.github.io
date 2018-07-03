@@ -17,3 +17,4 @@ package-lock.json
 yarn.lock
 .idea
 .jekyll-metadata
+!_assets/stylesheets/vendor
