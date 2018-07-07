@@ -26,9 +26,10 @@ rm -R _site/
 # Slight change in git-signing.html
 sed -i -e 's/<div class="highlight">/<div class="highlight" style="margin:0px; padding: 0px;">/g' posts/git-signing.html
 sed -i -e 's/<pre class="highlight">/<pre class="highlight" style="padding: 0px;">/g' posts/git-signing.html
+sed -i -e 's/<div class="language-bash highlighter-rouge">/<div class="language-bash highlighter-rouge" style="margin:20px 0;">/g' posts/git-signing.html 
 
 # Push to master.
-git add -fA
+git add -vA
 git commit --allow-empty -m "$(git log -1 --pretty=%B) [ci skip]"
 git push -f -q origin master
 
