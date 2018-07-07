@@ -51,7 +51,7 @@ For signing commits, we first need to generate a key if you don't have one. I us
 5. You can now go to Github and check the verified badge on your commits, the badge won't appear on previous commits as they were not signed until now.
 
 ### Tips:
-1. To sign all commits by default in any local repository on your computer, run git config --global commit.gpgsign true.
+1. To sign all commits by default in any local repository on your computer, run `git config --global commit.gpgsign true`.
 Doing this you won't need to add `-S` flag everytime you commit. A normal `git commit -m "your message"` will by default sign your commits, you'll just have to enter the passphrase.
 2. If you use VSCode for creating commits and remote synchronization too, and you want to sign commits using VSCode too. Enter the below command in terminal.
     ```bash
