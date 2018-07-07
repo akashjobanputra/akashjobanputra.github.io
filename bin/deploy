@@ -19,9 +19,13 @@ yarn install --modules-folder ./_assets/yarn
 bundle exec jekyll build
 
 # Delete and move files.
-find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
+find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name '.gitignore' ! -name 'vendor' ! -name '.bundle' -exec rm -rf {} \;
 mv _site/* .
 rm -R _site/
+
+# Slight change in git-signing.html
+sed -i -e 's/<div class="highlight">/<div class="highlight" style="margin:0px; padding: 0px;">/g' posts/git-signing.html
+sed -i -e 's/<pre class="highlight">/<pre class="highlight" style="padding: 0px;">/g' posts/git-signing.html
 
 # Push to master.
 git add -fA
