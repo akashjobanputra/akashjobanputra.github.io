@@ -6,7 +6,7 @@ tags: [git]
 ---
 
 If you don't know why you should sign your git commits, <a href="/posts/why-git-signing" target="_blank">check this out</a>. In gist, signing the commits verifies that it is indeed from the author mentioned in the commit details.  
-For signing commits, we first need to generate a key if you don't have one. I use my key generated from <a href="https://www.keybase.io" target="_blank">Keybase.io</a> for personal email, and had generated key using GPG for work account. You can use any one of them for generating the keys.  
+For signing commits if you don't have one, we first need to generate a key. I use my key generated from <a href="https://www.keybase.io" target="_blank">Keybase.io</a> for personal email, and had generated key using GPG for work account. You can use any one of them for generating the keys.  
 ## For Generating Keys using GPG and adding it to GitHub:
 1. Hit the below command in terminal to start key generation.  
     `$ gpg --full-generate-key`
