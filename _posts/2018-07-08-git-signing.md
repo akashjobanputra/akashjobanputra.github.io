@@ -9,7 +9,7 @@ If you don't know why you should sign your git commits, <a href="/posts/why-git-
 For signing commits if you don't have one, we first need to generate a key. I use my key generated from <a href="https://www.keybase.io" target="_blank">Keybase.io</a> for personal email, and had generated key using GPG for work account. You can use any one of them for generating the keys.  
 ## For Generating Keys using GPG and adding it to GitHub:
 1. Hit the below command in terminal to start key generation.  
-    `$ gpg --full-generate-key`
+    `$ gpg --full-gen-key`
 2. At the prompt, either select the kind of the key you want, or press Enter to accept the default `RSA and RSA`.
 3. At the key size prompt enter the max value, `4096`. And hit Enter.
 4. Enter the time for how long key should be valid. Press `Enter` to specify the default selection `0`, indicating that the key won't expire.
