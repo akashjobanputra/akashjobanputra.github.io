@@ -2,7 +2,7 @@
 layout: post
 title: "git signing"
 description: "Setup signing for git commits"
-tags: [git]
+tags: [git, gpg]
 ---
 
 If you don't know why you should sign your git commits, <a href="/posts/why-git-signing" target="_blank">check this out</a>. In gist, signing the commits verifies that it is indeed from the author mentioned in the commit details.  
