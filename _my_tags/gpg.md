@@ -1,4 +1,0 @@
----
-slug: gpg
-name: GPG
----

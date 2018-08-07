@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>AkashJ | git signing</title>
+  <meta name="description" content="Setup signing for git commits">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="git signing">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akashjobanputra.github.io/posts/git-signing">
+  <meta property="og:description" content="Setup signing for git commits">
+  <meta property="og:site_name" content="AkashJ">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://akashjobanputra.github.io/posts/git-signing">
+  <meta name="twitter:title" content="git signing">
+  <meta name="twitter:description" content="Setup signing for git commits">
+
+  
+    <meta property="og:image" content="https://akashjobanputra.github.io/assets/og-image-ec46e4daedc3fe5c39f19b65209eacab0e74f9e2217d29ae207a1e5b44b94d56.png">
+    <meta name="twitter:image" content="https://akashjobanputra.github.io/assets/og-image-ec46e4daedc3fe5c39f19b65209eacab0e74f9e2217d29ae207a1e5b44b94d56.png">
+  
+
+  <link href="https://akashjobanputra.github.iofeed.xml" type="application/rss+xml" rel="alternate" title="AkashJ Last 10 blog posts" />
+
+  
+
+  
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-dark-23afbb3857689b73c1a60492bd01ec4e23c4613c48f8790ca145b82ed69f1622.ico">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon-dark-ec46e4daedc3fe5c39f19b65209eacab0e74f9e2217d29ae207a1e5b44b94d56.png">
+    <link rel="stylesheet" type="text/css" href="/assets/dark-17432a9ca5ef63eab9b28bdc900735e24e7c5f1d1ca2a030679067b4e3e136f1.css">
+  
+</head>
+
+<body>
+  <main>
+    <div class="grid grid-centered">
+      <div class="grid-cell">
+        <nav class="header-nav scrollappear">
+  <a href="/" class="header-logo" title="AkashJ">AkashJ</a>
+  <ul class="header-links">
+    
+      <li>
+        <a href="/about" title="About me">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-about">
+  <use href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about" xlink:href="/assets/about-ecf154b571ab8034ae00aeed91a3b7ad68db80b46d958753ad6216c919486e88.svg#icon-about"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+      <li>
+        <a href="https://twitter.com/_Akash_J_" rel="noreferrer noopener" target="_blank" title="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-twitter">
+  <use href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter" xlink:href="/assets/twitter-8842c33965263ad1b03a978406826677a668f94125d5837e70ab83f24b3213a7.svg#icon-twitter"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://github.com/akashjobanputra" rel="noreferrer noopener" target="_blank" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-github">
+  <use href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github" xlink:href="/assets/github-094f81040819f34343ee6ffff0980f17e2807b08b595eaaf66ae3554934fd78d.svg#icon-github"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://keybase.io/akashj" rel="noreferrer noopener" target="_blank" title="Keybase">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-keybase">
+  <use href="/assets/keybase-4004cb8fb3e3f1f748f19fbea8a591d0bf5a00865e53977d673f2b09fcabf6e4.svg#icon-keybase" xlink:href="/assets/keybase-4004cb8fb3e3f1f748f19fbea8a591d0bf5a00865e53977d673f2b09fcabf6e4.svg#icon-keybase"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/in/jobanputraakash" rel="noreferrer noopener" target="_blank" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-linkedin">
+  <use href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin" xlink:href="/assets/linkedin-cdc5c107044324a3dfbea2e9ead15873f8dee304c37d73a046988956b706256e.svg#icon-linkedin"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+      <li>
+        <a href="https://instagram.com/akash.jobanputra" rel="noreferrer noopener" target="_blank" title="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-instagram">
+  <use href="/assets/instagram-37f85bc75b43ecc4c114d9a46f846327fe13c5893787c6afbcfef9d30d58bd9e.svg#icon-instagram" xlink:href="/assets/instagram-37f85bc75b43ecc4c114d9a46f846327fe13c5893787c6afbcfef9d30d58bd9e.svg#icon-instagram"></use>
+</svg>
+
+        </a>
+      </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <li>
+        <a href="/feed.xml" rel="noreferrer noopener" target="_blank" title="RSS">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon-rss">
+  <use href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss" xlink:href="/assets/rss-541ec5cea9cefd10d2fcfec01888f3f231a8829940249835fa7b7b3a12ae0d0d.svg#icon-rss"></use>
+</svg>
+
+        </a>
+      </li>
+    
+  </ul>
+</nav>
+
+        <article class="article scrollappear">
+          <header class="article-header">
+            <h1>git signing</h1>
+            <p>Setup signing for git commits</p>
+            <div class="article-list-footer">
+              <span class="article-list-date">
+                July 8, 2018
+              </span>
+              <span class="article-list-divider">-</span>
+              <span class="article-list-minutes">
+                
+                
+                  3 minute read
+                
+              </span>
+              <span class="article-list-divider">-</span>
+              <div class="article-list-tags">
+                
+                  <a href="/tag/git">git</a>
+                
+                  <a href="/tag/gpg">gpg</a>
+                
+              </div>
+            </div>
+          </header>
+
+          <div class="article-content">
+            <p>If you don’t know why you should sign your git commits, <a href="/posts/why-git-signing" target="_blank">check this out</a>. In gist, signing the commits verifies that it is indeed from the author mentioned in the commit details.<br />
+For signing commits if you don’t have one, we first need to generate a key. I use my key generated from <a href="https://www.keybase.io" target="_blank">Keybase.io</a> for personal email, and had generated key using GPG for work account. You can use any one of them for generating the keys.</p>
+<h2 id="for-generating-keys-using-gpg-and-adding-it-to-github">For Generating Keys using GPG and adding it to GitHub:</h2>
+<ol>
+  <li>Hit the below command in terminal to start key generation.<br />
+ <code class="highlighter-rouge">$ gpg --full-gen-key</code></li>
+  <li>At the prompt, either select the kind of the key you want, or press Enter to accept the default <code class="highlighter-rouge">RSA and RSA</code>.</li>
+  <li>At the key size prompt enter the max value, <code class="highlighter-rouge">4096</code>. And hit Enter.</li>
+  <li>Enter the time for how long key should be valid. Press <code class="highlighter-rouge">Enter</code> to specify the default selection <code class="highlighter-rouge">0</code>, indicating that the key won’t expire.</li>
+  <li>Verify that selections.</li>
+  <li>Enter your user ID information. Make sure the email id you enter here is one of the verified email in your github account. Key will be used to verify commits against that email.</li>
+  <li>Enter a passphrase.</li>
+  <li>Use the below command to list GPG keys for which we have Public and Private keys. Private keys are required to sign commits and tags
+ <code class="highlighter-rouge">$ gpg --list-secret-keys --keyid-format LONG</code></li>
+  <li>From the list of GPG keys, copy the GPG key ID you’d like to use. In this example, the GPG key ID is <code class="highlighter-rouge">FAAC90B03A08A733</code>:
+    <div class="language-bash highlighter-rouge" style="margin:20px 0;"><div class="highlight" style="margin:0px; padding: 0px;"><pre class="highlight" style="padding: 0px;"><code> <span class="nv">$ </span>gpg <span class="nt">--list-secret-keys</span> <span class="nt">--keyid-format</span> LONG
+ /home/akashj/.gnupg/pubring.kbx
+ <span class="nt">-------------------------------</span>
+ sec   rsa3072/FAAC90B03A08A733 2018-07-07 <span class="o">[</span>SC] <span class="o">[</span>expires: 2018-07-08]
+       7B46C11B914D1B551E3662C8FAAC90B03A08A733
+ uid                 <span class="o">[</span>ultimate] XYZPQR
+ ssb   rsa3072/5DE09A35133ECF55 2018-07-07 <span class="o">[</span>E] <span class="o">[</span>expires: 2018-07-08]
+</code></pre></div>    </div>
+  </li>
+  <li>Paste your key ID instead of <code class="highlighter-rouge">FAAC90B03A08A733</code> in
+    <div class="language-bash highlighter-rouge" style="margin:20px 0;"><div class="highlight" style="margin:0px; padding: 0px;"><pre class="highlight" style="padding: 0px;"><code><span class="nv">$ </span>gpg <span class="nt">--armor</span> <span class="nt">--export</span> FAAC90B03A08A733
+</code></pre></div>    </div>
+  </li>
+  <li>Copy your GPG key, starting with <code class="highlighter-rouge">-----BEGIN PGP PUBLIC KEY BLOCK-----</code> and ends with <code class="highlighter-rouge">-----END PGP PUBLIC KEY BLOCK-----</code>.</li>
+  <li>Go to SSH and GPG keys in Github Settings and click on New Key button</li>
+  <li>Paste the key copied on step 11 and click on Add GPG Key button.</li>
+  <li>Enter your Github password to confirm.</li>
+</ol>
+
+<h2 id="using-the-generated-key-to-sign-commits">Using the generated key to sign commits:</h2>
+<ol>
+  <li>You need to tell git about your signing key, copy the GPG key ID from step 9 above and paste it in
+    <div class="language-bash highlighter-rouge" style="margin:20px 0;"><div class="highlight" style="margin:0px; padding: 0px;"><pre class="highlight" style="padding: 0px;"><code> git config <span class="nt">--global</span> user.signingkey FAAC90B03A08A733
+</code></pre></div>    </div>
+  </li>
+  <li>Now onwards, when committing changes in your local branch, add the -S flag to the git commit command:
+    <div class="language-bash highlighter-rouge" style="margin:20px 0;"><div class="highlight" style="margin:0px; padding: 0px;"><pre class="highlight" style="padding: 0px;"><code> git commit <span class="nt">-S</span> <span class="nt">-m</span> <span class="s2">"your commit message"</span>
+</code></pre></div>    </div>
+  </li>
+  <li>It will ask passphrase for signing, provide the passphrase you entered while generating your key (in step 7 above).</li>
+  <li>After completing your commits, enter <code class="highlighter-rouge">git push</code> to push your commits to your remote repository.</li>
+  <li>You can now go to Github and check the verified badge on your commits, the badge won’t appear on previous commits as they were not signed until now.</li>
+</ol>
+
+<h3 id="tips">Tips:</h3>
+<ol>
+  <li>To sign all commits by default in any local repository on your computer, run <code class="highlighter-rouge">git config --global commit.gpgsign true</code>.
+Doing this you won’t need to add <code class="highlighter-rouge">-S</code> flag everytime you commit. A normal <code class="highlighter-rouge">git commit -m "your message"</code> will by default sign your commits, you’ll just have to enter the passphrase.</li>
+  <li>If you use VSCode for creating commits and remote synchronization too, and you want to sign commits using VSCode too. Enter the below command in terminal.
+    <div class="language-bash highlighter-rouge" style="margin:20px 0;"><div class="highlight" style="margin:0px; padding: 0px;"><pre class="highlight" style="padding: 0px;"><code> git config <span class="nt">--global</span> gpg.program <span class="k">$(</span>which gpg2<span class="k">)</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+          </div>
+          <div class="article-share">
+            
+            
+            <a href="https://twitter.com/home?status=git+signing%20-%20https://akashjobanputra.github.io/posts/git-signing%20by%20@_Akash_J_" title="Share on Twitter" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6 -18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6 0.8 15 2.5 22.1 -80.5-4-151.9-42.6-199.6-101.3 -8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7C67 210.7 52 206.3 39 199c0 0.4 0 0.8 0 1.2 0 47 33.4 86.1 77.7 95 -8.1 2.2-16.7 3.4-25.5 3.4 -6.2 0-12.3-0.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3 -33.1 26-74.9 41.5-120.3 41.5 -7.8 0-15.5-0.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-0.1-8.4-0.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://akashjobanputra.github.io/posts/git-signing" title="Share on Facebook" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 512 512"><path d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64H288z"/></svg>
+            </a>
+            <a href="https://plus.google.com/share?url=https://akashjobanputra.github.io/posts/git-signing" title="Share on Google+" rel="noreferrer noopener" target="_blank">
+              <svg viewBox="0 0 128 128"><path d="M40.7 55.9v16.1c0 0 15.6 0 22 0C59.2 82.5 53.8 88.2 40.7 88.2c-13.3 0-23.7-10.8-23.7-24.2s10.4-24.2 23.7-24.2c7.1 0 11.6 2.5 15.8 5.9 3.3-3.3 3.1-3.8 11.6-11.9 -7.2-6.6-16.8-10.6-27.4-10.6C18.2 23.3 0 41.5 0 64c0 22.5 18.2 40.7 40.7 40.7 33.6 0 41.8-29.3 39-48.8H40.7zM113.9 56.7V42.6h-10.1v14.1H89.4v10.1h14.5v14.5h10.1V66.8H128V56.7H113.9z"/></svg>
+            </a>
+          </div>
+
+          
+        </article>
+        <footer class="footer scrollappear">
+  <p>
+    Built using <a href="https://github.com/nielsenramon/chalk" rel="noreferrer noopener" target="_blank" title="Download Chalk">Chalk</a>, blog template for Jekyll.
+  </p>
+</footer>
+
+      </div>
+    </div>
+  </main>
+  
+
+<script type="text/javascript" src="/assets/vendor-0fb4b91f7ad6c193a69224eba7a01b691a2d7528ee672607575ccc0df3aea545.js"></script>
+
+
+  <script type="text/javascript" src="/assets/webfonts-96493456d319d1bf419afdf8701552d4d486fee6afd304897d4fd81eb4e0cc0b.js"></script>
+
+
+
+  <script type="text/javascript" src="/assets/scrollappear-e2da8ea567e418637e31266cc5302126eaa79f62a2273739086358b589a89ee6.js"></script>
+
+
+<script type="text/javascript" src="/assets/application-cfde13ac81ddaf4351b2e739603e2baf688d0fcc9aba613fe62bbb1c7b037fb9.js"></script>
+
+</body>
+</html>

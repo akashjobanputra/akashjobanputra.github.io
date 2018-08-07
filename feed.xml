@@ -1,20 +1,42 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="https://www.w3.org/2005/Atom" xmlns:dc="https://purl.org/dc/elements/1.1/">
   <channel>
-    <title>{{ site.name | xml_escape }}</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
-    <link>{{ site.url }}</link>
-    <atom:link href="{{ page.path | absolute_url }}" rel="self" type="application/rss+xml" />
-    {% for post in site.posts limit:10 %}
+    <title>AkashJ</title>
+    <description></description>
+    <link>https://akashjobanputra.github.io</link>
+    <atom:link href="https://akashjobanputra.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | absolute_url }}</link>
-        <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
+        <title>move your key</title>
+        <description>Move your private key to another system</description>
+        <pubDate>Wed, 08 Aug 2018 00:00:00 +0530</pubDate>
+        <link>https://akashjobanputra.github.io/posts/gpg-export</link>
+        <guid isPermaLink="true">https://akashjobanputra.github.io/posts/gpg-export</guid>
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>git signing</title>
+        <description>Setup signing for git commits</description>
+        <pubDate>Sun, 08 Jul 2018 00:00:00 +0530</pubDate>
+        <link>https://akashjobanputra.github.io/posts/git-signing</link>
+        <guid isPermaLink="true">https://akashjobanputra.github.io/posts/git-signing</guid>
+      </item>
+    
+      <item>
+        <title>git signing Why ?</title>
+        <description>Why you should sign your commits.</description>
+        <pubDate>Fri, 06 Jul 2018 00:00:00 +0530</pubDate>
+        <link>https://akashjobanputra.github.io/posts/why-git-signing</link>
+        <guid isPermaLink="true">https://akashjobanputra.github.io/posts/why-git-signing</guid>
+      </item>
+    
+      <item>
+        <title>how to see differences between files</title>
+        <description>For analysing difference between 2 or more files.</description>
+        <pubDate>Mon, 02 Jul 2018 00:00:00 +0530</pubDate>
+        <link>https://akashjobanputra.github.io/posts/diff-multiple-files</link>
+        <guid isPermaLink="true">https://akashjobanputra.github.io/posts/diff-multiple-files</guid>
+      </item>
+    
   </channel>
 </rss>
